@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flores Amarillas · 21 de Septiembre</title>
+<meta name="description" content="Elige tu versión de la animación de flores amarillas para el 21 de septiembre: primavera u otoño.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Quicksand:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --bg: #fbeecb;
+    --ink: #4a3618;
+    --ink-soft: #7a6337;
+    --amber: #c77d0a;
+    --petal: #ffb703;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html, body { min-height: 100%; }
+  body {
+    margin: 0;
+    font-family: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 78% 12%, rgba(255,215,120,0.55), transparent 45%),
+      linear-gradient(180deg, #fcefd0 0%, #f7e3b6 55%, #f3d99e 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    padding-block: clamp(40px, 8vh, 90px);
+  }
+  .flower { font-size: clamp(2.6rem, 9vw, 3.6rem); line-height: 1; margin-bottom: 8px; }
+  .eyebrow {
+    font-weight: 700; font-size: 0.8rem; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--amber); margin: 0 0 10px;
+  }
+  h1 {
+    font-family: "Playfair Display", Georgia, serif; font-weight: 600;
+    font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.05;
+    margin: 0 0 12px; text-wrap: balance;
+  }
+  .lead {
+    max-width: 34rem; margin: 0 auto 40px; font-size: clamp(1rem, 2.4vw, 1.12rem);
+    line-height: 1.6; color: var(--ink-soft);
+  }
+  .grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px; width: 100%; max-width: 44rem;
+  }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+  .choice {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; text-decoration: none; color: var(--ink);
+    border-radius: 22px; padding: 34px 22px; min-height: 190px;
+    border: 1px solid rgba(199,125,10,0.25);
+    box-shadow: 0 16px 40px -22px rgba(84,60,6,0.5);
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  }
+  .choice:hover { transform: translateY(-4px); box-shadow: 0 22px 48px -20px rgba(84,60,6,0.55); filter: brightness(1.02); }
+  .choice:focus-visible { outline: 3px solid var(--amber); outline-offset: 4px; }
+  .choice .emoji { font-size: 2.6rem; line-height: 1; }
+  .choice .name { font-family: "Playfair Display", serif; font-size: 1.6rem; }
+  .choice .desc { font-size: 0.92rem; color: var(--ink-soft); max-width: 15rem; }
+  .primavera { background: linear-gradient(160deg, #d8ecfa 0%, #eef7dd 55%, #fdf3d6 100%); }
+  .otono { background: linear-gradient(160deg, #f7d9a0 0%, #f3c877 55%, #e9a94b 100%); }
+  footer {
+    margin-top: 42px; font-size: 0.8rem; letter-spacing: 0.04em; color: var(--ink-soft); opacity: 0.85;
+  }
+</style>
+</head>
+<body>
+  <div class="flower">🌼</div>
+  <p class="eyebrow">21 de Septiembre</p>
+  <h1>Flores amarillas para la amistad</h1>
+  <p class="lead">
+    Cada 21 de septiembre se regalan flores amarillas como símbolo de amistad,
+    alegría y nuevos comienzos. Elige la versión que más te guste:
+  </p>
+
+  <nav class="grid">
+    <a class="choice primavera" href="primavera.html">
+      <span class="emoji">🌷</span>
+      <span class="name">Primavera</span>
+      <span class="desc">Cielo azul y pétalos flotando (tradición original).</span>
+    </a>
+    <a class="choice otono" href="otono.html">
+      <span class="emoji">🍂</span>
+      <span class="name">Otoño</span>
+      <span class="desc">Cielo dorado y hojas cayendo (estación en México hoy).</span>
+    </a>
+  </nav>
+
+  <footer>Hecho con cariño · Día de las flores amarillas</footer>
+</body>
+</html>
